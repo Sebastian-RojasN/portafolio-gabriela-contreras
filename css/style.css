@@ -83,7 +83,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/bg-general.png);
+    background-image: url('../img/bg-general.png');
     background-size: cover;
     background-repeat: no-repeat;
     

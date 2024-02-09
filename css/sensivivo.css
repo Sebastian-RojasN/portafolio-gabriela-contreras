@@ -235,7 +235,7 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(../img/cover-0-bg.png);
+    background-image: url('../img/cover-0-bg.png');
     /* parallax */
     height: 600px;
     background-attachment: fixed;
@@ -308,7 +308,7 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/minimalist-background-v2.png);
+    background-image: url('../img/minimalist-background-v2.png');
     /* parallax */
     /* height: 500px;
     background-attachment: fixed;
@@ -453,10 +453,10 @@ span{
 }
 
 .cover-section{
-    background-image: url(../img/parallax-banner-1.png);
+    background-image: url('../img/parallax-banner-1.png');
 }
 .cover-section-2{
-    background-image: url(../img/parallax-banner-2.png);
+    background-image: url('../img/parallax-banner-2.png');
 }
 
 
@@ -470,7 +470,7 @@ span{
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
-    background-image: url(../img/bg-section-2.png);
+    background-image: url('../img/bg-section-2.png');
 
     /* parallax */
     /* height: 500px;
@@ -754,7 +754,7 @@ span{
         padding: 2rem 3%;
     }
     .home{
-        background-image: url(../img/bg-medium.png);
+        background-image: url('../img/bg-medium.png');
         background-size: cover;
         background-color: #fff;
     }
@@ -787,7 +787,7 @@ span{
         padding: 2rem 3%;
     }
     .home{
-        background-image: url(../img/bg-medium.png);
+        background-image: url('../img/bg-medium.png');
         background-size: cover;
         background-color: #fff;
     }
@@ -860,7 +860,7 @@ span{
         grid-template-columns:  repeat(2, 1fr);
     }
     .home{
-        background-image: url(../img/bg-sensi-small.png);
+        background-image: url('../img/bg-sensi-small.png');
         background-size: cover;
         background-color: #fff;
 
@@ -872,7 +872,7 @@ span{
         grid-template-columns: 1fr;
     }
     .home{
-        background-image: url(../img/bg-sensi-small.png);
+        background-image: url('../img/bg-sensi-small.png');
         background-size: cover;
         background-color: #fff;
 
@@ -888,7 +888,7 @@ span{
         width: 100%;
     }
     .home{
-        background-image: url(../img/bg-sensi-small.png);
+        background-image: url('../img/bg-sensi-small.png');
         background-size: cover;
         background-color: #fff;
     }
@@ -912,7 +912,7 @@ span{
         margin-top: 2rem;
     }
     .home{
-        background-image: url(../img/bg-sensi-small.png);
+        background-image: url('../img/bg-sensi-small.png');
         background-size: cover;
         background-color: #fff;
 
