@@ -109,7 +109,7 @@ section {
     display: flex;
     justify-content: left;
     align-items: center;
-    background-image: url(/img/sensivivo-bg.png);
+    background-image: url(../img/sensivivo-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(68, 68, 68)   ;
@@ -235,7 +235,7 @@ span{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(/img/cover-0-bg.png);
+    background-image: url(../img/cover-0-bg.png);
     /* parallax */
     height: 600px;
     background-attachment: fixed;
@@ -308,7 +308,7 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(/img/minimalist-background-v2.png);
+    background-image: url(../img/minimalist-background-v2.png);
     /* parallax */
     /* height: 500px;
     background-attachment: fixed;
