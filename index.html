@@ -5,7 +5,7 @@
     <meta http-equiv='cache-control' content='no-cache'>
     <meta http-equiv='expires' content='0'>
     <meta http-equiv='pragma' content='no-cache'>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -26,7 +26,7 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Portafolio</a>
+        <!-- <a href="#" class="logo">Portafolio</a> -->
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
@@ -42,6 +42,10 @@
     <!-- home section -->
 
     <section class="home" id="home">
+        <div class="home-img">
+            <img src="img/index-image.png" alt="" class="src">
+        </div>
+        <div class="container-vacio"></div>
         <div class="home-content">
             <h2>Hola! Me llamo</h2>
             <h1>Gabriela Contreras</h1>
@@ -62,22 +66,20 @@
             </div>
             <!-- <a href="" class="btn">Descargar CV</a> -->
         </div>
-        <div class="home-img">
-            <img src="img/perfil.jpg" alt="" class="src">
-        </div>
+
     </section>
 
     <!-- cover-section -->
     <section class="cover-section">
         <div class="cover-content">
-            <h1>¡Algunos de mis logros académicos!</h1>
-        </div>
-        <div class="img-container">
-            <img src="img/merck-logo.jpg" alt="">
-            <img src="img/despega-logo.png" alt="">
-            <img src="img/congreso-logo.png" alt="">
-            <img src="img/science-up-logo.png" alt="">
-            <img src="img/amanda-beca-logo.jpeg" alt="">
+            <!-- <h1>¡Algunos de mis logros académicos!</h1> -->
+            <div class="img-container">
+                <img src="img/merck-logo.jpg" alt="">
+                <img src="img/despega-logo.png" alt="">
+                <img src="img/congreso-logo.png" alt="">
+                <img src="img/science-up-logo.png" alt="">
+                <img src="img/amanda-beca-logo.jpeg" alt="">
+            </div>
         </div>
     </section>
 
@@ -96,23 +98,30 @@
         <div class="about-content">
             <h2 class="heading">Acerca <span>de mí</span></h2>
             <h3>Química Farmacéutica!</h3>
-            <p>¡Hola! Soy Gabriela Contreras, estudiante de Química y Farmacia en la Universidad de Santiago de Chile (USACH), amante de la ciencia, la innovación y el emprendimiento.
+            <p><span class="about-span">¡Hola! Soy Gabriela Contreras, titulada de Química y Farmacia en la Universidad
+                    de Santiago de Chile (USACH)</span> , amante de la ciencia, la innovación y el emprendimiento.
 
-                Mi pasión por la química y la farmacia me ha llevado a desarrollar proyectos innovadores como Sensivivo y Monstergrip. Sensivivo es una crema a base de algas diseñada para tratar el acné, mientras que Monstergrip es un spray a base de magnesio que mejora el agarre en el gimnasio.
-                
-                A lo largo de mi trayectoria académica y emprendedora, he participado en diversos concursos donde he tenido la oportunidad de destacarme y demostrar mi capacidad para transformar ideas en soluciones tangibles.
-                
-                Creo firmemente en el poder de la ciencia para mejorar la calidad de vida de las personas y estoy comprometida con seguir innovando y haciendo una diferencia en el mundo.
-                
+                Mi pasión por la química y la farmacia me ha llevado a desarrollar proyectos innovadores como Sensivivo
+                y Monstergrip. Sensivivo es una crema a base de algas diseñada para tratar el acné, mientras que
+                Monstergrip es un spray a base de magnesio que mejora el agarre en el gimnasio.
+
+                A lo largo de mi trayectoria académica y emprendedora, he participado en diversos concursos donde he
+                tenido la oportunidad de destacarme y demostrar mi capacidad para transformar ideas en soluciones
+                tangibles.
+                <span class="about-span">
+                    Creo firmemente en el poder de la ciencia para mejorar la calidad de vida de las personas y estoy
+                    comprometida con seguir innovando y haciendo una diferencia en el mundo.
+                </span>
                 ¡Únete a mí en este emocionante viaje hacia la innovación y el cambio!
-                
-                ¡Gracias por visitar mi página web!</p>
+
+                ¡Gracias por visitar mi página web!
+            </p>
             <a href="#" class="btn">Leer más</a>
         </div>
     </section>
 
     <!-- projects section -->
-    <section class="services" id="services">
+    <!-- <section class="services" id="services">
         <h2 class="heading"> Mis <span>proyectos</span></h2>
 
         <div class="services-container">
@@ -139,6 +148,38 @@
                 <a href="monstergrip.html" class="btn">Leer más</a>
             </div>
         </div>
+    </section> -->
+
+    <!-- products section -->
+    <section class="products">
+        <h2 class="heading"> Mis <span>proyectos</span></h2>
+
+        <div class="product-row">
+            <div class="product">
+                <img class="a" src="/img/sensi-products-index.png" alt="Producto 1">
+                <div class="product-info">
+                    <h2>Sensivivo</h2>
+                    <!-- <p>Ideal para traerlo junto a ti y usarlo en cualquier momento del dia, textura suave y ligera, se
+                        absorbe rapidamente en tu piel</p> -->
+
+
+                    <!-- <h1 class="price">$19.990</h1> -->
+                    <a href="sensivivo.html" class="add-to-cart btn">Leer más</a>
+                </div>
+            </div>
+            <!-- Repite esta estructura para los otros tres productos -->
+            <div class="product">
+                <img class="b" src="/img/monster-products-index.png" alt="Producto 2">
+                <div class="product-info">
+                    <h2>Monstergrip</h2>
+                    <!-- <p>Ideal para traerlo junto a ti y usarlo en cualquier momento del dia, textura suave y ligera, se
+                            absorbe rapidamente en tu piel</p> -->
+                    <!-- <h1 class="price">$19.990</h1> -->
+                    <a href="monstergrip.html" class="add-to-cart btn">Leer más</a>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- premios section -->
