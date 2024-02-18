@@ -27,13 +27,11 @@
 <body>
     <header class="header">
         <!-- <a href="#" class="logo">Portafolio</a> -->
-
         <i class='bx bx-menu' id="menu-icon"></i>
-
         <nav class="navbar">
             <a href="#home" class="active">Inicio</a>
             <a href="#about">Acerca de</a>
-            <a href="#services">Proyectos</a>
+            <a href="#products">Proyectos</a>
             <a href="#portfolio">Premios</a>
             <a href="#contact">Contáctame</a>
         </nav>
@@ -59,29 +57,31 @@
                 página para descubrir más sobre mi pasión por la ciencia y la innovación!
             </p> -->
             <div class="social-media">
-                <a href=""><i class='bx bxl-facebook-circle'></i></a>
-                <a href=""><i class='bx bxl-twitter'></i></a>
-                <a href=""><i class='bx bxl-instagram-alt'></i></a>
-                <a href=""><i class='bx bxl-linkedin-square'></i></a>
+                <!-- <a href="" target="_blank"><i class='bx bxl-facebook-circle'></i></a> -->
+                <!-- <a href="" target="_blank"><i class='bx bxl-twitter'></i></a> -->
+                <a href="https://www.instagram.com/_gabysama/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/gabriela-contreras-pulgares-51b170172/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
             </div>
             <!-- <a href="" class="btn">Descargar CV</a> -->
         </div>
 
     </section>
 
-    <!-- cover-section -->
-    <section class="cover-section">
-        <div class="cover-content">
-            <!-- <h1>¡Algunos de mis logros académicos!</h1> -->
-            <div class="img-container">
-                <img src="img/merck-logo.jpg" alt="">
-                <img src="img/despega-logo.png" alt="">
-                <img src="img/congreso-logo.png" alt="">
-                <img src="img/science-up-logo.png" alt="">
-                <img src="img/amanda-beca-logo.jpeg" alt="">
-            </div>
+    <!-- video-section -->
+
+    <section class="video-section">
+        <div class="overlay"></div>
+        <video autoplay muted loop>
+            <source src="img/video-despega.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            Despega USACH 2023
         </div>
+        <a href="https://www.youtube.com/live/aiZMDR79Nxk?si=ysYhklEvMzWJR_q4&t=7566" target="_blank" class="btn btn-despega" id="btn-despega">Ver vídeo completo</a>
     </section>
+
+
+
 
 
 
@@ -120,6 +120,25 @@
         </div>
     </section>
 
+    <!-- cover-section -->
+    <section class="cover-section">
+        <div class="cover-content">
+            <h1 class="cover-title">¡Algunos de mis logros académicos!</h1>
+            <div class="img-container">
+                <a href="https://www.usach.cl/news/estudiantes-quimica-y-farmacia-ganan-concurso-historias-la-ciencia-chilena-2023"
+                    target="_blank" class="cover-logos logo-0"><img src="img/merck-logo.jpg" alt=""></a>
+                <a href="https://youtu.be/qqA9jWTMVPk?si=HM3oreVWp79qd2Cd&t=52" target="_blank" class="cover-logos logo-1"><img
+                        src="img/despega-logo.png" alt=""></a>
+                <a href="https://fqybusach.substack.com/p/investigacion-de-estudiante-de-quimica" target="_blank" class="cover-logos logo-2"><img
+                        src="img/congreso-logo.png" alt=""></a>
+                <a href="https://fqybusach.substack.com/p/sensivivo-y-geospace-math-ganan-final" target="_blank" class="cover-logos logo-3"><img
+                        src="img/science-up-logo.png" alt=""></a>
+                <a href="https://ww2.muniquilicura.cl/wp-content/uploads/2023/07/LISTADO-AMANDA-LABARCA-1.pdf"
+                    target="_blank" class="cover-logos logo-4"><img src="img/amanda-beca-logo.jpeg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
     <!-- projects section -->
     <!-- <section class="services" id="services">
         <h2 class="heading"> Mis <span>proyectos</span></h2>
@@ -151,11 +170,12 @@
     </section> -->
 
     <!-- products section -->
-    <section class="products">
+    <section class="products" id="products">
         <h2 class="heading"> Mis <span>proyectos</span></h2>
 
         <div class="product-row">
-            <div class="product">
+            <div class="product product-sensivivo">
+                <!-- <img src="img/f2.png" alt="" class="img-f1"> -->
                 <img class="a" src="img/sensi-products-index.png" alt="Producto 1">
                 <div class="product-info">
                     <h2>Sensivivo</h2>
@@ -164,22 +184,22 @@
 
 
                     <!-- <h1 class="price">$19.990</h1> -->
-                    <a href="sensivivo.html" class="add-to-cart btn">Leer más</a>
+                    <a href="sensivivo.html" target="_blank" class="add-to-cart btn">Leer más</a>
                 </div>
             </div>
             <!-- Repite esta estructura para los otros tres productos -->
-            <div class="product">
+            <div class="product product-monster">
                 <img class="b" src="img/monster-products-index.png" alt="Producto 2">
                 <div class="product-info">
+                    <!-- <img src="img/f1.png" alt="" class="img-f2"> -->
                     <h2>Monstergrip</h2>
                     <!-- <p>Ideal para traerlo junto a ti y usarlo en cualquier momento del dia, textura suave y ligera, se
                             absorbe rapidamente en tu piel</p> -->
                     <!-- <h1 class="price">$19.990</h1> -->
-                    <a href="monstergrip.html" class="add-to-cart btn">Leer más</a>
+                    <a href="monstergrip.html" target="_blank" class="add-to-cart btn">Leer más</a>
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-- premios section -->
@@ -220,22 +240,6 @@
                     <a href="#"><i class='bx bx-link-alt'></i></a>
                 </div>
             </div>
-            <!-- <div class="portfolio-box">
-                <img src="img/botellas.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>web design</h4>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <a href="#"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="img/botellas.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>web design</h4>
-                    <p>Lorem ipsum dolor sit amet </p>
-                    <a href="#"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -245,15 +249,15 @@
         <h2 class="heading"> Contáctame <span>ahora!</span></h2>
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Nombre completo">
-                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Email" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Número telefónico">
-                <input type="text" placeholder="Asunto del email">
+                <input type="tel" id="phone" name="phone" pattern="\+569 \d{4} \d{4}" placeholder="+569 XXXX XXXX" required>
+                <input type="text" placeholder="Asunto del email" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
-            <input type="submit" value="Enviar mensaje" class="btn">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje" required></textarea>
+            <input type="submit" value="Enviar mensaje" class="btn contact-btn" id="contact-button">
         </form>
     </section>
 

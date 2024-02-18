@@ -51,6 +51,22 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.content, .btn-despega', {origin: 'right' });
+
+
+
+// cover-section
+ScrollReveal().reveal('.cover-title', { scale: 1.2, delay: 0});
+
+ScrollReveal().reveal('.logo-0', { scale: 1.2, delay: 200});
+ScrollReveal().reveal('.logo-1', { scale: 1.2, delay: 500});
+ScrollReveal().reveal('.logo-2', { scale: 1.2, delay: 800});
+ScrollReveal().reveal('.logo-3', { scale: 1.2, delay: 1100});
+ScrollReveal().reveal('.logo-4', { scale: 1.2, delay: 1400});
+
+// productos-section
+ScrollReveal().reveal('.product-sensivivo', {origin: 'left', delay: 400 });
+ScrollReveal().reveal('.product-monster', {origin: 'right', delay: 800});
 
 
 // type js

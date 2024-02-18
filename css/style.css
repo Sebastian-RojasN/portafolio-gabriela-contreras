@@ -219,8 +219,6 @@ span{
     flex-direction: column;
     min-height: 50vh; /* Ajusta esta propiedad */
     background: linear-gradient(to bottom, #000000, var(--main-color) , #000000); /* Degradado de negro (#000000) a morado (#800080) de arriba hacia abajo y luego a negro */
-
-    color: var(--second-bg-color);
     animation: moveBackground 10s linear infinite;
     padding: 0 10% 0;
 
@@ -234,8 +232,9 @@ span{
 }
 
 .cover-content h1{
+    color: #fff;
     font-size: 4rem;
-    color: var(--main-color);
+    margin-bottom: 5rem;
 }
 
 .img-container{
@@ -254,6 +253,7 @@ span{
     margin: 2rem 2rem 2rem 2rem;
     transition: .5s ease;
 }
+
 .img-container img:hover{
     transform: scale(1.1);
     box-shadow: 0 0 1rem var(--main-color);
@@ -262,8 +262,80 @@ span{
 .btn:hover{
     transform: scale(1.1);
     box-shadow: none;
-    background-color: #3d8445;
     color: #fff;
+}
+
+/* video-section */
+
+.video-section {
+    position: relative;
+    min-height: 50vh; /* Ajusta la altura según tu diseño */
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translateX(-50%); */
+
+    width: 100%;
+    height: 170%;
+    object-fit: cover; /* Ajusta la relación de aspecto */
+    z-index: 1; /* Asegura que el video esté por encima del degradado */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 2; /* Asegura que el degradado esté detrás del video */
+}
+
+.content {
+    position: absolute;
+    z-index: 3; /* Asegura que el contenido esté por encima del video */
+    /* Estilos adicionales para el contenido superpuesto */
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: 0 0rem 3rem var(--main-color);
+    font-weight: bold;
+    bottom: 11%;
+    right: 10%;
+
+}
+
+#btn-despega {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: 10%;
+    /* bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+
+.video-section a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    border-radius: 4rem;
+}
+
+.video-section a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 
@@ -417,12 +489,12 @@ span{
 }
 
 .products{
-    background: linear-gradient(to bottom, #000000, var(--main-color) , #000000); /* Degradado de negro (#000000) a morado (#800080) de arriba hacia abajo y luego a negro */
+    /* background: linear-gradient(to bottom, #000000, var(--main-color) , #000000);  */
 
     /* background-image: url(../img/products-section.png); */
     /* background-size: cover; */
     color: #fff;
-    background-color: rgb(54, 54, 54) ;
+    background-color: #000000 ;
 
 }
 
@@ -431,26 +503,52 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-between;
     /* background-color: #007bff; */
     background-size: cover;
     color: #fff;
 }
 
+.img-f1{
+    z-index: -1;
+    position: absolute;
+    top:10%;
+    left: 10%;
+}
+.img-f2{
+    z-index: -1;
+    position: absolute;
+    top:10%;
+    left: 10%;
+}
+
+
 .product {
-    width: 40vw; /* Ajusta el ancho de cada producto */
+    width: 30vw; /* Ajusta el ancho de cada producto */
     transition: .5s ease;
-    padding: 2rem;
     border-radius: 2rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 8rem;
+}
+
+.product-sensivivo{
+    margin-right: 4rem;
+    background-image: url(/img/f2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.product-monster{
+    margin-left: 4rem;
+    background-image: url(/img/f1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .product img {
-    width: 50%;
+    width: 60%;
     height: auto;
     /* animation: floatImage 4s ease-in-out infinite; */
 }
@@ -467,7 +565,7 @@ span{
 }
 
 .product-info h2 {
-    font-size: 5rem;
+    font-size: 7rem;
     margin: 0;
     text-shadow: 0 0rem 2rem var(--main-color);
 
@@ -483,7 +581,6 @@ span{
 .product-info h1 {
     font-size: 2.5rem;
     margin: 5px 0;
-    
 }
 
 .rating {
@@ -500,25 +597,10 @@ span{
     font-size: 18px;
 }
 
-.add-to-cart {
-    background-color: #4CAF50; /* Color de fondo del botón */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.add-to-cart:hover {
-    background-color: #45a049; /* Color de fondo del botón al pasar el ratón */
-}
-
 .product:hover {
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  */
-    transform: scale(1.1); /* Escala al pasar el ratón */
+    box-shadow: 0 0 500px var(--main-color); 
+    /* transform: scale(1.1) !important;  */
 }
-
 
 .product-info a{
     display: inline-flex;
@@ -528,7 +610,7 @@ span{
     border: .2rem solid var(--main-color);
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 0 0 3rem 0;
     transition: .5s ease;
     border-radius: 4rem;
 }
@@ -539,12 +621,10 @@ span{
     box-shadow: 0 0 1rem var(--main-color);
 }
 
-
-
 /* premios section */
 
 .portfolio{
-    background: black;
+    background: linear-gradient(to bottom, #000000, var(--main-color) , #000000); 
     color: #fff;
 }
 
@@ -632,6 +712,10 @@ span{
 .contact{
     background-color: black;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact h2 {
@@ -639,7 +723,7 @@ span{
 }
 
 .contact form {
-    max-width: 70rem;
+    min-width: 80rem;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
@@ -656,8 +740,8 @@ span{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--second-bg-color);
+    color: #fff;
+    background: #8c52ff ;
     border-radius:  .8rem;
     margin: .7rem 0;
 }
@@ -674,6 +758,57 @@ span{
     margin-top: 2rem;
     cursor: pointer;
 }
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 5rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Cambiar el color del placeholder a rojo */
+input::placeholder {
+    color: #fff;
+}
+
+  /* Cambiar el color del placeholder a azul en un textarea */
+textarea::placeholder {
+    color: #fff;
+}
+
+#contact-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+    border-radius: 4rem;
+}
+
+#contact-button:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
 
 /* footer section */
 
