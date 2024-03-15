@@ -1,3 +1,26 @@
+/* @font-face {
+    font-family: 'HK';
+    src: url('../fuentes/HKGrotesk-Black.otf') format('opentype');
+}
+@font-face {
+    font-family: 'HK';
+    src: url('../fuentes/HKGrotesk-Bold.otf') format('opentype');
+    font-style: bold;
+
+}
+@font-face {
+    font-family: 'HK';
+    src: url('../fuentes/HKGrotesk-BoldItalic.otf') format('opentype');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'HK';
+    src: url('../fuentes/HKGrotesk-Regular.otf') format('opentype');
+} */
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -6,15 +29,14 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'HK', 'Poppins', sans-serif;
 }
 
 :root{
-    --bg-color: #f0f0f0;
+    --bg-color: #EDE9E5;
     --second-bg-color: #d6eaf8;
     --text-color: #333333;
-    --main-color: #8c52ff;
-
+    --main-color: #1566a8;
 }
 
 html {
@@ -27,21 +49,17 @@ body {
     color: var(--text-color);
 }
 
-
 section {
     min-height: 100vh;
-    padding: 10rem 10% 2rem;
+    padding: 10rem 12% 2rem;
 }
-
-
-
 
 .header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 10%;
+    padding: 2rem 12%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -62,7 +80,7 @@ section {
 
 .navbar a {
     font-size: 2rem;
-    color: #fff;
+    color: var(--text-color);
     margin-left: 4rem;
     transition: .4s;
     font-weight: 500;
@@ -79,16 +97,16 @@ section {
     display: none;
 }
 
+
+
+
 .home{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
-    /* background-image: url('../img/new_bg.png');
-    background-size: cover;
-    background-repeat: no-repeat; */
-    background-color:black;
     color: #fff;
-    
+    background: linear-gradient(to right, var(--bg-color) 70%, white 50%);
+    padding-bottom: 0;
+
 }
 
 /* configuracion imagen index */
@@ -99,11 +117,10 @@ section {
 }
 
 .home-img img {
-    margin-top: 15vh;
-    height: 80vh;
     position: absolute;
-    top: 0;
-    /* left: -25rem; */
+    width: 35vw;
+    bottom: 0;
+    left: -20rem;
     /* transform: scaleX(-1);  */
 
 }
@@ -136,11 +153,13 @@ section {
 .home-content h2{
     font-size: 4rem;
     font-weight: 700;
+    color: var(--text-color);
 }
 .home-content h3{
-    font-size: 8rem;
+    font-size: 5rem;
     font-weight: 700;
-    text-shadow: 0 0 1rem black;
+    color: var(--text-color);
+    /* text-shadow: 0 0 1rem black; */
 
     /* background-color: rgba(0, 0, 0, 0.75);
     border-radius: 2rem;
@@ -157,10 +176,11 @@ span{
 }
 
 .home-content h1{
-    font-size: 20rem;
+    font-size: 18rem;
     font-weight: 700;
     line-height: .8;
-    text-shadow: 0 0 5rem var(--main-color);
+    color: var(--text-color);
+    /* text-shadow: 0 0 5rem var(--main-color); */
 
 }
 
@@ -188,17 +208,17 @@ span{
 .social-media a:hover{
     background: var(--main-color);
     color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    /* box-shadow: 0 0 1rem var(--main-color); */
 }
 
 .btn{
     display: inline-block;
     padding: 1rem 2.8rem;
-    background: var(--main-color);
+    background: var(--bg-color);
     border-radius:  4rem;
-    box-shadow:  0 0 1rem var(--main-color);
+    /* box-shadow:  0 0 1rem var(--main-color); */
     font-size: 1.6rem;
-    color: var(--second-bg-color);
+    color: var(--text-color);
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
@@ -218,7 +238,16 @@ span{
     align-items: center;
     flex-direction: column;
     min-height: 50vh; /* Ajusta esta propiedad */
-    background: linear-gradient(to bottom, #000000, var(--main-color) , #000000); /* Degradado de negro (#000000) a morado (#800080) de arriba hacia abajo y luego a negro */
+    /* background: linear-gradient(to bottom, var(--bg-color), var(--text-color) , var(--bg-color));  */
+    background-image: url(../img/cover-1-minimalist.png);
+    background-size: cover;
+
+        /* parallax */
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
     animation: moveBackground 10s linear infinite;
     padding: 0 10% 0;
 
@@ -232,9 +261,17 @@ span{
 }
 
 .cover-content h1{
-    color: #fff;
-    font-size: 4rem;
+    display: inline;
+    color: var(--text-color);
+    font-size: 7rem;
     margin-bottom: 5rem;
+    /* background-color: rgba(237, 233, 229, 0.5); */
+    border-radius: 2rem;
+    padding: 2rem 5rem;
+    text-shadow: 0 0rem 5rem var(--bg-color);
+
+
+    
 }
 
 .img-container{
@@ -244,6 +281,7 @@ span{
     flex-direction: row;
     letter-spacing: .1rem;
     transition: .5s ease;
+    margin-top: 5rem;
 }
 
 .img-container img{
@@ -256,11 +294,11 @@ span{
 
 .img-container img:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 1rem var(--main-color);
+    /* box-shadow: 0 0 1rem var(--main-color); */
 }
 
 .btn:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     box-shadow: none;
     color: #fff;
 }
@@ -291,7 +329,7 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    background: linear-gradient(#EDE9E5, rgba(0, 0, 0, 0),#EDE9E5);
     z-index: 2; /* Asegura que el degradado esté detrás del video */
 }
 
@@ -300,8 +338,8 @@ span{
     z-index: 3; /* Asegura que el contenido esté por encima del video */
     /* Estilos adicionales para el contenido superpuesto */
     font-size: 6rem;
-    color: #fff;
-    text-shadow: 0 0rem 3rem var(--main-color);
+    color: var(--text-color);
+    /* text-shadow: 0 0rem 3rem var(--main-color); */
     font-weight: bold;
     bottom: 11%;
     right: 10%;
@@ -323,19 +361,19 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
-    border: .2rem solid var(--main-color);
+    background: var(--bg-color);
+    border: .2rem solid var(--text-color);
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--text-color);
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
     border-radius: 4rem;
 }
 
 .video-section a:hover{
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    background: var(--text-color);
+    color: var(--bg-color);
+    /* box-shadow: 0 0 1rem var(--main-color); */
 }
 
 
@@ -347,7 +385,7 @@ span{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: black;
+    background: var(--bg-color);
     color: #fff;
 }
 
@@ -367,24 +405,26 @@ span{
 .about-content h2{
     text-align: left;
     line-height: 1.2;
+    color: var(--text-color);
 }
 
 .about-content h3{
     font-size: 3rem;
-    background-image: url(../img/linea.png);
+    /* background-image: url(../img/linea.png); */
     background-size: contain;
     padding:  2rem 0 2rem 2rem;
     width: 50%;
     border-radius: 6rem;
 }
 .about-content p{
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 2rem 0 3rem;
+    color: var(--text-color);
 
 }
 
 .about-span{
-    color: var(--main-color);
+    color: var(--text-color);
     font-weight: 800;
 }
 
@@ -394,17 +434,21 @@ span{
     justify-content: center;
     align-items: center;
     background: transparent;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--text-color);
     font-size: 2rem;
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    color: var(--text-color);
+    margin: 0 1.5rem 3rem 0;
     transition: .5s ease;
 }
 
 .about-content a:hover{
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    background: var(--text-color);
+    color: var(--bg-color);
+    /* box-shadow: 0 0 1rem var(--main-color); */
+}
+
+.gap{
+    padding: 5rem;
 }
 
 
@@ -493,10 +537,14 @@ span{
 
     /* background-image: url(../img/products-section.png); */
     /* background-size: cover; */
-    color: #fff;
-    background-color: #000000 ;
 
 }
+
+.products {
+    background: linear-gradient(to right, var(--bg-color) 50%, white 50%);
+}
+
+
 
 .product-row {
     /* min-height: 0; */
@@ -535,16 +583,20 @@ span{
 }
 
 .product-sensivivo{
-    margin-right: 4rem;
-    background-image: url(/img/f2.png);
+    margin-right: 14rem;
+    /* border: .2rem solid rgba(0,0,0,.1); */
+
+    /* background-image: url(/img/f2.png);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 .product-monster{
-    margin-left: 4rem;
-    background-image: url(/img/f1.png);
+    margin-left: 14rem;
+    /* border: .2rem solid rgba(0,0,0,.1); */
+
+    /* background-image: url(/img/f1.png);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .product img {
@@ -567,8 +619,8 @@ span{
 .product-info h2 {
     font-size: 7rem;
     margin: 0;
-    text-shadow: 0 0rem 2rem var(--main-color);
-
+    /* text-shadow: 0 0rem 2rem var(--main-color); */
+    color: var(--text-color);
 }
 
 .product-info p {
@@ -598,7 +650,7 @@ span{
 }
 
 .product:hover {
-    box-shadow: 0 0 500px var(--main-color); 
+    box-shadow: 0 0 500px var(--text-color); 
     /* transform: scale(1.1) !important;  */
 }
 
@@ -607,25 +659,41 @@ span{
     justify-content: center;
     align-items: center;
     background: transparent;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--text-color);
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--text-color);
     margin: 0 0 3rem 0;
     transition: .5s ease;
     border-radius: 4rem;
 }
 
 .product-info a:hover{
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    background: var(--text-color);
+    color: var(--bg-color);
+    /* box-shadow: 0 0 1rem var(--main-color); */
 }
+
+
+
+
+
+
+
+
 
 /* premios section */
 
 .portfolio{
-    background: linear-gradient(to bottom, #000000, var(--main-color) , #000000); 
-    color: #fff;
+    /* background: linear-gradient(to bottom, #000000, var(--main-color) , #000000);  */
+    /* color: #fff; */
+    /* background-image: url(../img/min-cover-2.png);
+    background-size: cover;
+
+    height: 1500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; */
+
 }
 
 .portfolio h2 {
@@ -649,7 +717,7 @@ span{
 
 .portfolio-box img{
     width: 100%;
-    height: 45vh;
+    height: 30vh;
     object-fit: cover;
     transition: .5s ease;
 }
@@ -710,8 +778,7 @@ span{
 /* contact section */
 
 .contact{
-    background-color: black;
-    color: #fff;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -741,7 +808,7 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: #fff;
-    background: #8c52ff ;
+    background: var(--text-color) ;
     border-radius:  .8rem;
     margin: .7rem 0;
 }
@@ -759,7 +826,7 @@ span{
     cursor: pointer;
 }
 
-.social-media a{
+/* .social-media a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -778,7 +845,7 @@ span{
     background: var(--main-color);
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
-}
+} */
 
 /* Cambiar el color del placeholder a rojo */
 input::placeholder {
@@ -795,18 +862,18 @@ textarea::placeholder {
     justify-content: center;
     align-items: center;
     background: transparent;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--text-color);
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--text-color);
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
     border-radius: 4rem;
 }
 
 #contact-button:hover {
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    background: var(--text-color);
+    color: var(--bg-color);
+    /* box-shadow: 0 0 1rem var(--main-color); */
 }
 
 
@@ -818,8 +885,8 @@ textarea::placeholder {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: black;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .footer-text{
@@ -831,13 +898,13 @@ textarea::placeholder {
     justify-content: center;
     align-items: center;
     padding: .8rem;
-    background: var(--main-color);
+    background: var(--text-color);
     border-radius: .8rem;
     transition: .5s ease;
 }
 
 .footer-iconTop a:hover{
-    box-shadow:  0 0 1rem var(--main-color);
+    /* box-shadow:  0 0 1rem var(--main-color); */
 }
 
 .footer-iconTop a i {
